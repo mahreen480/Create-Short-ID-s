@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>login</title>
+    <style>
+       ul {
+  background-color: #000000;
+}
+li a:hover {
+  background-color: #0cf72a;
+}
+.word-container {
+  width: 500px;
+  height: 50px;
+  margin: auto;
+  position: relative;
+  top: 80px;
+}
+.word-container h1 {
+  margin: 0;
+  text-align: center;
+  color: #ab0a0a;
+}
+.register-container {
+  width: 600px;
+  height: 350px;
+  margin: auto;
+  position: relative;
+  top: 100px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.userid input[type="text"] {
+  position: relative;
+  left: 115px;
+  padding: 8px;
+  top: 10px;
+}
+.pwd input[type="password"] {
+  position: relative;
+  padding: 8px;
+  left: 115px;
+  top: 25px;
+}
+.email input[type="email"] {
+  position: relative;
+  padding: 8px;
+  left: 115px;
+  top: 40px;
+}
+.btn button[type="submit"] {
+  position: relative;
+  left: 115px;
+  top: 55px;
+  padding: 8px;
+  width: 382px;
+  border: 1px solid #000000;
+  color: #ffffff;
+  background-color: #ab0a0a;
+}
+div.btn button[type="submit"]:hover {
+  background-color: rgb(255, 0, 0);
+}
+    </style>
+</head>
+<body>
+    <div class="word-container">
+        <h1>Login</h1>
+      </div>
+      <div class="register-container">
+        <form action="/user/login" method="POST">
+          <div class="pwd">
+            <label>
+              <input type="password" placeholder="Password" name="password" size="50">
+            </label>
+          </div>
+          <div class="email">
+            <label>
+              <input type="email" placeholder="Email Address" name="email" size="50">
+            </label>
+          </div>
+          <div class="btn">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+</body>
+</html>

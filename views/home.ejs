@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home Page</title>
+    <style>
+        body {
+            width: 500px;
+            height: 50px;
+            margin: auto;
+            position: relative;
+            top: 80px;
+            text-align: center;
+        }
+        h1 {
+        margin: 0;
+        text-align: center;
+        color: #ab0a0a;
+        }
+        
+       form{
+        width: 400px;
+        height: 150px;
+        margin: auto;
+        position: relative;
+        top: 40px;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding-top: 10px;
+        }
+         input {
+        position: relative;
+        padding: 8px;
+        top: 5px;
+        }
+        button {
+        position: relative;
+        left: 15px;
+        top: 10px;
+        padding: 8px;
+        width: 100px;
+        border: 1px solid #000000;
+        color: #ffffff;
+        background-color: #ab0a0a;
+        }
+        button:hover {
+        background-color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>You are creating your URL shortner</h1>
+    <% if (locals.id) { %>
+        <p>URL Generated: http://localhost:8080/url/<%= id %></p>
+    <% } %>
+    <br>
+<div>
+    <form method="POST" action="/url">
+        <label for="">Enter your URL</label>
+        <input type="text" name="url"
+         placeholder="https://example"/>
+         <br>
+         <br>
+        <button type="submit">Generate</button>
+    </form>
+</div>
+
+</body>
+</html>
